@@ -1,48 +1,119 @@
 
 * {
-margin: 0;
+margin:0;
 padding: 0;
+color: white;
 box-sizing: border-box;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-border: 3px solid black;
+border: 1px solid white
 
 
 }
 
 body {
-    background-color: azure;
+    background-color: rgb(169, 245, 227);
+    margin: 0;
 }
 
 
 .outside-container {
+    display:flex;
+    flex-direction: column;
+    height:auto;
     padding: 10px;
+    justify-content:center;
 
 }
 
 button {
-    outline: none;
-    background-color: rgb(255, 255, 255);
-    color:rgb(162, 2, 255);
-    font-size:medium;
+    background-color:#001b44;;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 20px 52px;
+    text-align: center;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+    float: left;
 
 }
 
-P {
+p {
     font-size:medium;
-    color:rgb(255, 0, 64)
-
+    color:rgb(169, 23, 23);
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: rgb(251, 251, 251);
+    font-size: 1.2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 15px 52px;
+    text-align: center;
 }
 
 
 .bar-container p {
+    display: flex;
+    flex-wrap: wrap;
+    background: c;
     float: right;
+    box-shadow: 10px 5px 5px red;
 }
 
-.inside-container {
+.card {
+    background-color:	#FFFFE0;
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: 60px auto;
+    padding: 20px;
+    width: 60vw;
+    display: block;
+  }
 
+  .card p{
+    font-size: medium;
+    font-weight: 600;
+    border: none;
+    text-align: center;
+    color: black;
+    margin: 60px auto;
+    padding: 10px;
+    width: 80vw;
+    display: block;
+  }
 
+h1, h2 {
+    text-align: center;
+    color:blue
 }
 
+.web-intro button {
+    background-color: #001b44;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 20px 52px;
+    text-align: center;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin: 0 auto;
+    display: block;
+}
 
 
 
