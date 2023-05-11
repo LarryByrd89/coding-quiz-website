@@ -5,6 +5,7 @@
     width: 500px;
     height: 500px;
     border: 1px solid purple;
+    color: rgb(69, 4, 131);
 }
 #startTime {
     background-color: purple;
@@ -32,6 +33,15 @@ h1 {
 button {
     border-radius: 8px;
     cursor: pointer;
+}
+
+li {
+    background-color: purple;
+    margin-top: 10px;
+    padding: 5px 15px;
+    width: 80%;
+    font-size: 18px;
+    color: white;
 }
 
 textarea {

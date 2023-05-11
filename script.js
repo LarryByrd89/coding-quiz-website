@@ -38,7 +38,6 @@ var introbody = document.querySelector("#intro-body");
 
 var secondsLeft = 75;
 var holdInterval = 0;
-var penalty = 10;
 var ulCreate = document.createElement("ul");
 
 
@@ -114,20 +113,20 @@ function allDone() {
     questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
 
-    // Heading:
+
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "That's it!"
 
     questionsDiv.appendChild(createH1);
 
-    // Paragraph
+    
     var createP = document.createElement("p");
     createP.setAttribute("id", "createP");
 
     questionsDiv.appendChild(createP);
 
-    // Calculates time remaining and replaces it with score
+    
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
         var createP2 = document.createElement("p");
@@ -137,14 +136,14 @@ function allDone() {
         questionsDiv.appendChild(createP2);
     }
 
-    // Label
+
     var createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "Enter your initials: ";
 
     questionsDiv.appendChild(createLabel);
 
-    // input
+    
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
@@ -152,7 +151,7 @@ function allDone() {
 
     questionsDiv.appendChild(createInput);
 
-    // submit
+    
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
@@ -182,7 +181,7 @@ function allDone() {
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
-            // Travels to final page
+           
             window.location.replace("./HighScores.html");
         }
     });
