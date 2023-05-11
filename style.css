@@ -1,0 +1,51 @@
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+border: 3px solid black;
+
+
+}
+
+body {
+    background-color: azure;
+}
+
+
+.outside-container {
+    padding: 10px;
+
+}
+
+button {
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    color:rgb(162, 2, 255);
+    font-size:medium;
+
+}
+
+P {
+    font-size:medium;
+    color:rgb(255, 0, 64)
+
+}
+
+
+.bar-container p {
+    float: right;
+}
+
+.inside-container {
+
+
+}
+
+
+
+
+
+
+
