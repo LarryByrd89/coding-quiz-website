@@ -26,3 +26,21 @@ var questions = [
     },
 
 ];
+
+
+var quizTime = 60;
+
+// quiz progress and score
+var currentQuestion = 0;
+var correctAnswers = 0;
+var timeLeft = quizTime;
+
+// HTML elements
+var startButtonEl = document.querySelector("#start-button");
+var quizContainerEl = document.querySelector("#quiz-container");
+var questionEl = document.querySelector("#question");
+var answerButtonsEl = document.querySelector("#answer-buttons");
+var timerEl = document.querySelector("#timer");
+var resultEl = document.querySelector("#result");
+var scoreEl = document.querySelector("#score");
+var initialsEl = document.querySelector("#initials");
