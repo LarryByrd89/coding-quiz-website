@@ -1,31 +1,4 @@
-var questions = [
-    {
-        title: "Inside which HTML element do we put the JavaScript?",
-        choices: ["javascript", "scripting", "script", "js"],
-        answer: "script"
-    },
-    {
-        title: "Where is the correct place to insert a JavaScript?",
-        choices: ["body", "head", "head & body"],
-        answer: "head & body"
-    },
-    {
-        title: "The external JavaScript file must contain the <script> tag.",
-        choices: ["true","false"],
-        answer: "false"
-    },
-    {
-        title: "How to write an IF statement in JavaScript?",
-        choices: ["if i = 5", "if i = 5 then", "if i ==5", "if(i==5)"],
-        answer: "if(i==5)"
-    },
-    {
-        title: "How to write an IF statement in JavaScript?",
-        choices: ["<!--This-->", "//This", "'This'"],
-        answer: "//This"
-    },
 
-];
 
 var score = 0;
 var questionIndex = 0;
@@ -34,8 +7,7 @@ var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTime");
 var questions = document.querySelector("#questions");
 var introbody = document.querySelector("#intro-body");
-
-
+var userChoices;
 var secondsLeft = 75;
 var holdInterval = 0;
 var ulCreate = document.createElement("ul");
@@ -55,20 +27,20 @@ timer.addEventListener("click", function () {
             }
         }, 1000);
     }
-    render(questionIndex);
+    userChoices(questionIndex);
 });
 
-function render(questionIndex) {
-  
-    questionsDiv.innerHTML = "";
+function userChoices(questionIndex) {
+    var questions = document.querySelector("#questions")
+    questions.innerHTML = "";
     ulCreate.innerHTML = "";
-    
-    for (var i = 0; i < questions.length; i++) {
-        
-        var userQuestion = questions[questionIndex].title;
-        var userChoices = questions[questionIndex].choices;
-        questionsDiv.textContent = userQuestion;
-    }
+
+    var pQuestion1 = document.querySelector("#question1");
+    pQuestion1.textContent = "test";
+
+    var userQuestion = questions[questionIndex].title;
+    userChoices = questions[questionIndex].choices;
+    questionsDiv.textContent = userQuestion;
     
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
@@ -78,6 +50,58 @@ function render(questionIndex) {
         listItem.addEventListener("click", (compare));
     })
 }
+    
+    for (var i = 0; i < questions.length; i++) {
+        let pQuestion = document.querySelector(`#question${i}`)
+        var userQuestion = questions[questionIndex].title;
+        var userChoices = questions[questionIndex].choices;
+    }
+
+    var pQuestion1 = document.querySelector("#question1");
+    var pQuestion2 = document.querySelector("#question2");
+    var pQuestion3 = document.querySelector("#question3");
+        
+    var userQuestion = questions[questionIndex].title;
+    var userChoices = questions[questionIndex].choices;
+        //questions.textContent = userQuestion;
+    
+    
+    var questions = [
+        {
+            title: "Inside which HTML element do we put the JavaScript?",
+            choices: ["javascript", "scripting", "script", "js"],
+            answer: "script"
+        },
+        {
+            title: "Where is the correct place to insert a JavaScript?",
+            choices: ["body", "head", "head & body"],
+            answer: "head & body"
+        },
+        {
+            title: "The external JavaScript file must contain the <script> tag.",
+            choices: ["true","false"],
+            answer: "false"
+        },
+        {
+            title: "How to write an IF statement in JavaScript?",
+            choices: ["if i = 5", "if i = 5 then", "if i ==5", "if(i==5)"],
+            answer: "if(i==5)"
+        },
+        {
+            title: "How to write an IF statement in JavaScript?",
+            choices: ["<!--This-->", "//This", "'This'"],
+            answer: "//This"
+        },
+    
+    ];
+    userChoices.forEach(function (newItem) {
+        var listItem = document.createElement("li");
+        listItem.textContent = newItem;
+        questions.appendChild(ulCreate);
+        ulCreate.appendChild(listItem);
+        listItem.addEventListener("click", (compare));
+    })
+
 
 function compare(event) {
     var element = event.target;
@@ -103,14 +127,14 @@ function compare(event) {
         allDone();
         createDiv.textContent = "You answered  " + score + "/" + questions.length + " correctly!";
     } else {
-        render(questionIndex);
+        userChoices(questionIndex);
     }
-    questionsDiv.appendChild(createDiv);
+    questions.appendChild(createDiv);
 
 }
 
 function allDone() {
-    questionsDiv.innerHTML = "";
+    questions.innerHTML = "";
     currentTime.innerHTML = "";
 
 
@@ -118,13 +142,13 @@ function allDone() {
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "That's it!"
 
-    questionsDiv.appendChild(createH1);
+    questions.appendChild(createH1);
 
     
     var createP = document.createElement("p");
     createP.setAttribute("id", "createP");
 
-    questionsDiv.appendChild(createP);
+    questions.appendChild(createP);
 
     
     if (secondsLeft >= 0) {
@@ -133,7 +157,7 @@ function allDone() {
         clearInterval(holdInterval);
         createP.textContent = "Your final score is: " + timeRemaining;
 
-        questionsDiv.appendChild(createP2);
+        questions.appendChild(createP2);
     }
 
 
@@ -141,7 +165,7 @@ function allDone() {
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "Enter your initials: ";
 
-    questionsDiv.appendChild(createLabel);
+    questions.appendChild(createLabel);
 
     
     var createInput = document.createElement("input");
@@ -149,7 +173,7 @@ function allDone() {
     createInput.setAttribute("id", "initials");
     createInput.textContent = "";
 
-    questionsDiv.appendChild(createInput);
+    questions.appendChild(createInput);
 
     
     var createSubmit = document.createElement("button");
@@ -157,7 +181,7 @@ function allDone() {
     createSubmit.setAttribute("id", "Submit");
     createSubmit.textContent = "Submit";
 
-    questionsDiv.appendChild(createSubmit);
+    questions.appendChild(createSubmit);
 
     createSubmit.addEventListener("click", function () {
         var initials = createInput.value;
