@@ -11,13 +11,14 @@
 }
 #startTime {
     background-color: purple;
-    margin-left: 33%;
+    margin-left: 0%;
     padding: 15px 32px;
     font-size: 20px;
     color: white;
 }
 #questions {
     margin: 40px;
+    text-align: center;
 }
 
 #currentTime {
@@ -35,6 +36,7 @@ h1 {
 button {
     border-radius: 8px;
     cursor: pointer;
+    margin:40;
 }
 
 li {

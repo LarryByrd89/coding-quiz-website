@@ -23,7 +23,7 @@ timer.addEventListener("click", function () {
             if (secondsLeft <= 0) {
                 clearInterval(holdInterval);
                 allDone();
-                currentTime.textContent = "That's All Folks!";
+                currentTime.textContent = "You Finished!";
             }
         }, 1000);
     }
@@ -35,12 +35,9 @@ function userChoices(questionIndex) {
     questions.innerHTML = "";
     ulCreate.innerHTML = "";
 
-    var pQuestion1 = document.querySelector("#question1");
-    pQuestion1.textContent = "test";
-
-    var userQuestion = questions[questionIndex].title;
     userChoices = questions[questionIndex].choices;
-    questionsDiv.textContent = userQuestion;
+    var userQuestion = questions[questionIndex].title;
+    questions.textContent = userQuestion;
     
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
@@ -61,8 +58,6 @@ function userChoices(questionIndex) {
     var pQuestion2 = document.querySelector("#question2");
     var pQuestion3 = document.querySelector("#question3");
         
-    var userQuestion = questions[questionIndex].title;
-    var userChoices = questions[questionIndex].choices;
         //questions.textContent = userQuestion;
     
     
@@ -94,13 +89,7 @@ function userChoices(questionIndex) {
         },
     
     ];
-    userChoices.forEach(function (newItem) {
-        var listItem = document.createElement("li");
-        listItem.textContent = newItem;
-        questions.appendChild(ulCreate);
-        ulCreate.appendChild(listItem);
-        listItem.addEventListener("click", (compare));
-    })
+  
 
 
 function compare(event) {
@@ -140,7 +129,7 @@ function allDone() {
 
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
-    createH1.textContent = "That's it!"
+    createH1.textContent = "That's All Folks!"
 
     questions.appendChild(createH1);
 
@@ -211,3 +200,4 @@ function allDone() {
     });
 
 }
+
