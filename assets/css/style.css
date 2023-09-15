@@ -1,9 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    color: #170f0f;
     margin: 0;
     padding: 0;
+    font-size: 50px;
+    background-image: url('toppng.com-matrix-434037-matrix-code-1918x1151.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
@@ -15,7 +19,7 @@ header {
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 100px 50px;
     transition: color 0.3s ease;
 }
 
@@ -27,13 +31,62 @@ button {
     background-color: #007bff;
     color: #fff;
     border: none;
+    padding: 30px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 30px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#quizContent.center-content {
+    text-align: center;
+}
+
+ul#optionsUl li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+#start {
     padding: 10px 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
+#start:hover {
+    background-color: #ffcd00;
+}
+
+#nextButton {
+    padding: 10px 120x;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    top: -30px;
+    font-weight: bold;
+    left: 20px;
+}
+
+#nextButton:hover {
+    background-color: #ffcd00; 
+}
+
 button:hover {
-    background-color: #0056b3;
+    color:#ffcd00;
 }
 
 
@@ -62,6 +115,39 @@ th {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
+#inputBox {
+    width: 200px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+#newDiv h3 {
+    color: red;
+}
+
+.description-box {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 70px auto;
+    max-width: 800px;
+}
+
+.description-box h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.description-box p {
+    font-size: 35px;
+    line-height: 1.5;
+}
+
+
 
 
 

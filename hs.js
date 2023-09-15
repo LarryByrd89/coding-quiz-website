@@ -15,6 +15,9 @@ clearButton.addEventListener("click", function() {
 var storeScores = localStorage.getItem("storeScores");
 storeScores = JSON.parse(storeScores);
 
+if (storeScores !== null) {
+    storeScores.sort((a, b) => b.score - a.score);
+}
 
 if (storeScores !== null) {
     for (var i = 0; i < storeScores.length; i++) {

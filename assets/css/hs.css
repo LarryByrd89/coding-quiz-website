@@ -1,0 +1,39 @@
+#container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    color: #333;
+}
+
+ul#displayScores {
+    list-style: none;
+    padding: 0;
+}
+
+ul#displayScores li {
+    font-size: 30px;
+    margin-bottom: 10px;
+    background-color: #a5a5a5;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#back, #clear {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#back:hover, #clear:hover {
+    background-color: #0056b3;
+}
