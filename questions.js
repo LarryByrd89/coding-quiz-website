@@ -7,19 +7,19 @@ var startBtn = document.querySelector("#start");
 
 var questions = [
     {
-        title: "Inside which HTML element do we put the JavaScript?",
-        choices: ["javascript", "scripting", "script", "js"],
-        answer: "script"
+        title: "Choose the correct HTML element for the largest heading:",
+        choices: ["h6", "heading", "LARGE", "h1"],
+        answer: "h1"
     },
     {
-        title: "Where is the correct place to insert a JavaScript?",
+        title: "Where is the best place to insert a JavaScript?",
         choices: ["body", "head", "head & body"],
-        answer: "head & body"
+        answer: "body"
     },
     {
-        title: "The external JavaScript file must contain the <script> tag.",
-        choices: ["true","false"],
-        answer: "false"
+        title: "What is the correct HTML element for inserting a line break?",
+        choices: ["break","lb","br"],
+        answer: "br"
     },
     {
         title: "How to write an IF statement in JavaScript?",
@@ -27,9 +27,9 @@ var questions = [
         answer: "if(i==5)"
     },
     {
-        title: "How to write an IF statement in JavaScript?",
-        choices: ["<!--This-->", "//This", "'This'"],
-        answer: "//This"
+        title: "How to increase the size of the wording on the page in CSS?",
+        choices: ["font-size:", "big-font", "var font-edit"],
+        answer: "font-size:"
     },
 ];
 var questionIndex = 0;
@@ -198,7 +198,7 @@ function theEnd() {
             storeScores.push(finalScore);
             var newScore = JSON.stringify(storeScores);
             localStorage.setItem("storeScores", newScore);
-            window.location.replace("highscores.html");
+            window.location.replace("hs.html");
         }
     });
 };
