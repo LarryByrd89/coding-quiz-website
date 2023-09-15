@@ -18,8 +18,8 @@
 <br>
 <div align="center">
 
-![Alt text](dev-tools.png)
-![Alt text](gh.png)
+![Alt text](assets/img/dev-tools.png)
+![Alt text](assets/img/gh.png)
 
 </div>
 
@@ -47,15 +47,19 @@
 
 # UI SneakPeak ❤️ 
 
-![Alt text](peek.PNG)
+![Alt text](assets/img/newpeek.png)
 
-<br><br>
+<br></br>
 
 # Refrences
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
-https://courses.bootcampspot.com/courses/3530/pages/3-dot-3-5-incorporate-arrays-and-for-loops?module_item_id=852443
+- [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 
-**For more, reach me at laryn.n99@gmail.com**
+- [Eloquent-JavaScript](https://eloquentjavascript.net/)
 
-<br>
+- [MeyerWeb](https://meyerweb.com/eric/tools/css/reset/)
+
+<br></br>
+
+**For more, reach me at: laryn.n99@gmail.com**
+
