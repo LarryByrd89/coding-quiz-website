@@ -202,3 +202,24 @@ function theEnd() {
         }
     });
 };
+
+// Event listener for starting the quiz
+startBtn.addEventListener("click", startQuiz);
+
+function startQuiz() {
+
+    // Show the timer
+    document.querySelector("#timer").style.display = "block";
+
+    if (timeInterval === 0) {
+        timeInterval = setInterval(function() {
+            countdown--;
+            timer.textContent = "Time: " + countdown;
+            if (countdown <= 0) {
+                clearInterval(timeInterval);
+                theEnd();
+            }
+        }, 1000);
+    }
+    newQuestion(questionIndex);
+}
